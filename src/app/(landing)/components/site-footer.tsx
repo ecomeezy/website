@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { Mail, Phone, Github, Twitter, Linkedin } from 'lucide-react'
 
 export function SiteFooter() {
   return (
@@ -55,25 +56,37 @@ export function SiteFooter() {
             <h4 className="mb-4 text-sm font-semibold">Connect</h4>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link href="https://github.com/ecomeezy" className="text-muted-foreground hover:text-foreground">
+                <Link 
+                  href="mailto:hello@ecomeezy.com" 
+                  className="text-muted-foreground hover:text-foreground inline-flex items-center gap-2"
+                >
+                  <Mail size={16} />
+                  contact@ecomeezy.com
+                </Link>
+              </li>
+              <li>
+                <Link 
+                  href="tel:+1234567890" 
+                  className="text-muted-foreground hover:text-foreground inline-flex items-center gap-2"
+                >
+                  <Phone size={16} />
+                  (575) 378-3955
+                </Link>
+              </li>
+              <li>
+                <Link 
+                  href="https://github.com/ecomeezy" 
+                  className="text-muted-foreground hover:text-foreground inline-flex items-center gap-2"
+                >
+                  <Github size={16} />
                   GitHub
-                </Link>
-              </li>
-              <li>
-                <Link href="https://twitter.com/ecomeezy" className="text-muted-foreground hover:text-foreground">
-                  Twitter
-                </Link>
-              </li>
-              <li>
-                <Link href="https://linkedin.com/company/ecomeezy" className="text-muted-foreground hover:text-foreground">
-                  LinkedIn
                 </Link>
               </li>
             </ul>
           </div>
         </div>
         <div className="mt-12 border-t pt-8 text-center text-sm text-muted-foreground">
-          <p>© {new Date().getFullYear()} Ecomeezy. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Ecomeezy, LLC. All rights reserved.</p>
         </div>
       </div>
     </footer>
